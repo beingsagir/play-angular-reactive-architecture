@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /                                 controllers.Application.index()
 GET     /apiOne                           controllers.Application.apiOne()
 GET     /apiTwo                           controllers.Application.apiTwo()
 

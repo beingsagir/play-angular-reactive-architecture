@@ -1,8 +1,12 @@
 'use strict';
-
+document.domain= "localhost";
 angular.module('clientApp')
+	.config(function($compileProvider) {
+          $compileProvider
+              .imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|content|file|data):/);
+	})
 	.factory('ConnectAPI', ['$http', function($http){
-		var BASE_URL = 'http://www.localhost:9090';
+		var BASE_URL = 'http://localhost:9090';
 		function patchDeferred(defer){
 			defer.always = function(callback){
 				defer.then(callback, callback);
@@ -17,6 +21,7 @@ angular.module('clientApp')
 					url = url + '/' + exten
 				}
 				var url = $http.get(url);
+				console.log(url);
 				return patchDeferred(url);
 			}
 		}
