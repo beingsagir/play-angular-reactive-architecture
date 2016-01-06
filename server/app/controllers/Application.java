@@ -14,8 +14,7 @@ public class Application extends Controller {
 
     public Result apiOne() {
         response().setHeader("Access-Control-Allow-Origin", "*");
-        System.out.println("hit.... ");
-        return ok(toJson("name: TEST 1")).as("application/json");
+        return ok(toJson("{name: TEST 1}")).as("application/json");
     }
 
     public Result apiTwo() {

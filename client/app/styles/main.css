@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+  background-color: #EEEEEE;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -60,7 +61,7 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
   }
@@ -80,4 +81,28 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}*/
+
+
+/* custom */
+
+.navbar-default {
+    background-color: #D9EDF7;
+}
+
+.footer {
+  padding-left: 0;
+  padding-right: 0;
+  min-height: 300px;
+  background: #E6F4FB;
+  color: #1570a6;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #E6F4FB;
+}
+
+.sidebar{
+  background-color: #E6F4FB;
 }
